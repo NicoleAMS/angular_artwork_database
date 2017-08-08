@@ -1,2 +1,12 @@
-<h6>List of artworks:</h6>
-<app-artwork-item></app-artwork-item>
+<div class="row">
+  <div class="col col-md-12">
+    <app-artwork-item *ngFor="let artwork of artworks; let i = index" [artwork]="artwork" [index]="i"></app-artwork-item>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-12">
+    <button class="btn btn-success">Add new artwork</button>
+    <hr>
+  </div>
+</div>

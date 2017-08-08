@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Artwork } from '../../artwork.model';
 
 @Component({
   selector: 'app-artwork-item',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artwork-item.component.css']
 })
 export class ArtworkItemComponent implements OnInit {
+  @Input() artwork: Artwork; 
+  @Input() index: number;
 
   constructor() { }
 
