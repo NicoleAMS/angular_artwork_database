@@ -1,2 +1,13 @@
-<h6>List of artists:</h6>
-<app-artist></app-artist>
+<div class="row">
+  <div class="col col-md-12">
+    <app-artist *ngFor="let artist of artists; let i = index" [artist]="artist" [index]="i"></app-artist>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-md-12">
+    <button class="btn btn-info">Add new artist</button>
+    <hr>
+  </div>
+</div>
+
