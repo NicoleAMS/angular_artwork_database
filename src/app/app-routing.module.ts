@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { ArtworksComponent } from './artworks/artworks.component';
 import { ArtworkDetailComponent } from './artworks/artwork-detail/artwork-detail.component';
+import { ArtworksInfotextComponent } from './artworks/artworks-infotext/artworks-infotext.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/artworks', pathMatch: 'full' },
   { path: 'artworks', component: ArtworksComponent, children: [
+    {path: '', component: ArtworksInfotextComponent},
     { path: ':id', component: ArtworkDetailComponent }
   ]},
   { path: 'artists', component: ArtistsComponent }

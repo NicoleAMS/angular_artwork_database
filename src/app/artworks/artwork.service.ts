@@ -22,4 +22,8 @@ export class ArtworkService {
   getArtworks() {
     return this.artworks.slice();
   }
+
+  getArtwork(id: number) {
+    return this.artworks[id];
+  }
 }
