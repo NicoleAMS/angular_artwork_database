@@ -5,7 +5,9 @@
     <app-artwork-list></app-artwork-list>
   </div>
   <div class="col col-md-7">
-    <h4>Please select an artwork for more details</h4>
-    <app-artwork-detail></app-artwork-detail>
+    <app-artwork-detail *ngIf="selectedArtwork; else infoText" [artwork]="selectedArtwork"></app-artwork-detail>
+    <ng-template #infoText>
+      <h4>Please select an artwork for more details</h4>
+    </ng-template> 
   </div>
 </div>

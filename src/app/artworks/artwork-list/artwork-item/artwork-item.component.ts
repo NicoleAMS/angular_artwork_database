@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ArtworkService } from '../../artwork.service';
 
 import { Artwork } from '../../artwork.model';
 
@@ -11,9 +12,14 @@ export class ArtworkItemComponent implements OnInit {
   @Input() artwork: Artwork; 
   @Input() index: number;
 
-  constructor() { }
+  constructor(private artworkService: ArtworkService) { }
 
   ngOnInit() {
+  }
+
+  onSelected() {
+    console.log(this.artwork);
+    this.artworkService.artworkSelected.emit(this.artwork);
   }
 
 }

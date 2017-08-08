@@ -1,8 +1,9 @@
 <a class="list-group-item list-group-item-action" style="cursor: pointer;">
   <!-- <div class="row"> -->
     <div class=" col col-lg-8 col-md-12">
-      <h4 class="">{{artist.firstName}} {{artist.lastName}}</h4>
-      <p class="">{{artist.birthYear}} - {{artist.deathYear}}</p>
+      <h4 class="list-group-item-heading">{{artist.firstName}} {{artist.lastName}}</h4>
+      <p class="list-group-item-text">{{artist.birthYear}} - {{artist.deathYear}}</p>
+      <p class="list-group-item-text">{{artist.country}}</p>
     </div>
     <span class=" col col-lg-4 col-md-12">
       <img src="{{artist.image}}" alt="Image of: {{artist.lastName}}" class="img-responsive" style="max-width: 125px;">
